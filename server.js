@@ -3,11 +3,21 @@
 const express = require('express');
 const cors = require('cors');
 
+require('dotenv').config();
+
 const app = express();
+
+// Middlewares
 
 app.use(cors());
 
-let port = process.env.PORT || 3000;
-app.listen(port, function() {
-    console.log(`app is running at http://localhost:${port}`);
+// Routes
+
+// Root
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/views/index.html');
+});
+
+app.listen(process.env.PORT, function() {
+    console.log(`app is running at http://localhost:${process.env.PORT}`);
 });
