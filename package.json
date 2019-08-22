@@ -1,0 +1,25 @@
+{
+  "name": "file-metadata-microservice",
+  "version": "1.0.0",
+  "description": "A freeCodeCamp APIs and Microservices: File Metadata Microservice project.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arantebw/file-metadata-microservice.git"
+  },
+  "keywords": [
+    "file",
+    "metadata",
+    "microservice"
+  ],
+  "author": "Billy Arante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arantebw/file-metadata-microservice/issues"
+  },
+  "homepage": "https://github.com/arantebw/file-metadata-microservice#readme"
+}
