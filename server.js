@@ -18,6 +18,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
 
-app.listen(process.env.PORT, function() {
-    console.log(`app is running at http://localhost:${process.env.PORT}`);
+app.listen(process.env.PORT, process.env.HOSTNAME, function() {
+    console.log(`app is running at http://${process.env.HOSTNAME}:${process.env.PORT}`);
 });
