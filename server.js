@@ -17,6 +17,9 @@ app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 // Popper
 app.use('/popper', express.static(__dirname + '/node_modules/popper.js/dist/umd/'));
 
+// Font Awesome
+app.use('/fontawesome', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
+
 app.use(cors());
 
 // Routes
