@@ -3,6 +3,7 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
+const sass = require('node-sass-middleware');
 
 const app = express();
 
@@ -19,6 +20,17 @@ app.use('/popper', express.static(__dirname + '/node_modules/popper.js/dist/umd/
 
 // Font Awesome
 app.use('/fontawesome', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
+
+// Sass
+app.use(sass({
+    src: __dirname + '/assets',
+    dest: __dirname + '/public',
+    debug: true,
+    outputStyle: 'compressed'
+}));
+
+// Public assets
+app.use(express.static(__dirname + '/public/'));
 
 app.use(cors());
 
