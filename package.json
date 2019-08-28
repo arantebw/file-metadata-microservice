@@ -23,8 +23,11 @@
   },
   "homepage": "https://github.com/arantebw/file-metadata-microservice#readme",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   }
 }

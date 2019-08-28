@@ -2,12 +2,20 @@
 
 const express = require('express');
 const cors = require('cors');
-
 require('dotenv').config();
 
 const app = express();
 
 // Middlewares
+
+// Bootstrap
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist/'));
+
+// jQuery
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+
+// Popper
+app.use('/popper', express.static(__dirname + '/node_modules/popper.js/dist/umd/'));
 
 app.use(cors());
 
@@ -18,6 +26,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
 
-app.listen(process.env.PORT, process.env.HOSTNAME, function() {
-    console.log(`app is running at http://${process.env.HOSTNAME}:${process.env.PORT}`);
+app.listen(process.env.PORT, function() {
+    console.log(`Server is running at http://localhost:${process.env.PORT}`);
 });
